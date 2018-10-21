@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>JS Bin</title>
+  <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <script>
+    <!-- 获取页面的宽度 -->
+    var pageWidth=window.innerWidth
+    <!-- 字符串+数字+字符串  正好得出html的font-size是多少-->
+    document.write('<style>html{font-size:'+pageWidth/10+'px;}</style>')
+  </script>
+  <style>
+  *{
+  margin:0;
+  padding:0;
+}
+*{
+  box-sizing:border-box;
+}
+.child{
+  background:#ddd;
+}
+body{
+  font-size:16px;
+}
+.child{
+ /*  宽度占屏幕宽度的40%。高度占一半 */
+  width:4rem;
+  height:2rem;
+  margin:0.5rem 0.5rem;
+  float:left;
+/*   px与rem混用。0.015rem太小显示不出来，小于1，最终也变成1px */
+  border:1px solid red;
+}
+.clearfix::after{
+  content:'';
+  display:block;
+  clear:both;
+}
+  </style>
+</head>
+<body>
+<div class="parent clearfix">
+  <div class="child">
+    box
+  </div>
+    <div class="child">
+    box
+  </div>
+    <div class="child">
+    box
+  </div>  <div class="child">
+    box
+  </div>
+</div>
+</body>
+</html>
